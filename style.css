@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #333;
+  color: #eee;
+  padding: 2rem;
+
+  display: grid;
+  place-content: center;
+}
+
+.header .title-header {
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+.main {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main .card {
+  background-color: rebeccapurple;
+  padding: 3rem 4rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
