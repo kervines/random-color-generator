@@ -27,12 +27,21 @@ body {
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .main .card {
-  background-color: rebeccapurple;
-  padding: 3rem 4rem;
+  width: 15rem;
+  height: 10rem;
   border: 1px solid #fff;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h2 {
+  font-size: 2rem;
 }
