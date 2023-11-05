@@ -1,15 +1,20 @@
 const backgroundCard = document.querySelectorAll('.card');
 
 function colorGenerator() {
-  const hexRed = Math.floor(Math.random() * 255).toString(16);
-  const hexGreen = Math.floor(Math.random() * 255).toString(16);
-  const hexBlue = Math.floor(Math.random() * 255).toString(16);
-
+  const hexRed = Math.round(Math.random() * 0xff)
+    .toString(16)
+    .padStart(2, 0);
+  const hexGreen = Math.round(Math.random() * 0xff)
+    .toString(16)
+    .padStart(2, 0);
+  const hexBlue = Math.round(Math.random() * 0xff)
+    .toString(16)
+    .padStart(2, 0);
   return `#${hexRed}${hexGreen}${hexBlue}`;
 }
 
-backgroundCard.forEach((color) => {
+backgroundCard.forEach((codeColor) => {
   const hexCode = colorGenerator();
-  color.style.backgroundColor = hexCode;
-  color.innerHTML = `<h2>${hexCode}</h2>`;
+  codeColor.style.backgroundColor = hexCode;
+  codeColor.innerHTML = `<h2>${hexCode}</h2>`;
 });
