@@ -1,3 +1,5 @@
+import { copiarTexto } from './copy.js';
+
 const backgroundCard = document.querySelectorAll('.card');
 
 function colorGenerator() {
@@ -16,5 +18,12 @@ function colorGenerator() {
 backgroundCard.forEach((codeColor) => {
   const hexCode = colorGenerator();
   codeColor.style.backgroundColor = hexCode;
-  codeColor.innerHTML = `<h2>${hexCode}</h2>`;
+  codeColor.innerHTML = `<h2>${hexCode}</h2>
+  <i class="fa-regular fa-copy"></i>`;
+});
+
+backgroundCard.forEach((copyItem) => {
+  copyItem.addEventListener('click', (e) => {
+    copiarTexto(e.target.innerText);
+  });
 });
