@@ -1,6 +1,12 @@
 import { copiarTexto } from './copy.js';
 
 const backgroundCard = document.querySelectorAll('.card');
+const animationIcon = document.querySelector('.title-header i');
+
+animationIcon.addEventListener('click', () => {
+  animationIcon.classList.add('animation-icon');
+  location.reload();
+});
 
 function colorGenerator() {
   const hexRed = Math.round(Math.random() * 0xff)
