@@ -9,16 +9,10 @@ animationIcon.addEventListener('click', () => {
 });
 
 function colorGenerator() {
-  const hexRed = Math.round(Math.random() * 0xff)
+  const randomColor = Math.round(Math.random() * 0xffffff)
     .toString(16)
-    .padStart(2, 0);
-  const hexGreen = Math.round(Math.random() * 0xff)
-    .toString(16)
-    .padStart(2, 0);
-  const hexBlue = Math.round(Math.random() * 0xff)
-    .toString(16)
-    .padStart(2, 0);
-  return `#${hexRed}${hexGreen}${hexBlue}`;
+    .padStart(6, 0);
+  return `#${randomColor}`;
 }
 
 backgroundCard.forEach((codeColor) => {
